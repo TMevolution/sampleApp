@@ -1,10 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+</head>
 
 <body>
-  <div class="wrapper">
-    <p>おみくじ<br>ボタンをクリックしてください。</p>
-    <div class="wrapper-button">
-      <button id="button" class="button">おみくじを引く</button>
-    </div>
-    <p id="result"></p>
-  </div>
+  <h1>おみくじを引いてみよう</h1>
+  <h2>ボタンを押してね！</h2>
+<script>
+
+function Omikuji() {
+
+	let omikuji = ["大吉","吉","中吉","小吉","末吉","凶","大凶"];
+	let r = Math.floor( Math.random() * omikuji.length) ;//おみくじぶんの数字を作ります
+	document.getElementById("kekka").innerHTML = omikuji[r];//結果をid="kekka"に表示します
+}
+
+</script>
+
+<button onclick="Omikuji();">　おみくじを引く　</button>
+<p id="kekka"></p>
+
 </body>
+</html>
