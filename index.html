@@ -11,9 +11,53 @@
 
 function Omikuji() {
 
-	let omikuji = ["大吉","吉","中吉","小吉","末吉","凶","大凶"];
+	let omikuji = ["大吉","吉","中吉","小吉","末吉"];
 	let r = Math.floor( Math.random() * omikuji.length) ;//おみくじぶんの数字を作ります
 	document.getElementById("kekka").innerHTML = omikuji[r];//結果をid="kekka"に表示します
+	switch(r){
+
+		case 0:
+			OmikujiMessageDaikichi();
+			break;
+
+		case 1:
+			OmikujiMessagekichi();
+			break;
+
+		case 2:
+			OmikujiMessagechukichi();
+			break;
+
+		case 3:
+			OmikujiMessageshoukichi();
+			break;
+
+		case 4:
+			OmikujiMessagesuekichi();
+			break;
+
+	}
+
+}
+
+function OmikujiMessageDaikichi(){
+	document.getElementById("Message_daikichi").innerHTML = "今年は何もかもうまくいく！最高の一年になります！";
+}
+
+function OmikujiMessagekichi(){
+	document.getElementById("Message_kichi").innerHTML = "縁起のいい一年になりますように！";
+}
+
+function OmikujiMessagechukichi(){
+	document.getElementById("Message_chukichi").innerHTML = "目標に向かって進む一年に！";
+}
+
+function OmikujiMessageshoukichi(){
+	document.getElementById("Message_shoukichi").innerHTML = "正月を楽しんで！";
+}
+
+function OmikujiMessagesuekichi(){
+	document.getElementById("Message_suekichi").innerHTML = "食べ過ぎに気を付けて！";
 }
 
 </script>
